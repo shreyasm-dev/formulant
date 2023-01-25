@@ -35,6 +35,8 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "@types/nearley": "^2.11.2",
+    "nearley": "^2.20.1",
     "source-map-support": "^0.5.21"
   }
 }
