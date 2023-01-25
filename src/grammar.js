@@ -34,7 +34,7 @@ var grammar = {
     {"name": "term$ebnf$3", "symbols": ["term$ebnf$3$subexpression$1"], "postprocess": id},
     {"name": "term$ebnf$3", "symbols": [], "postprocess": function(d) {return null;}},
     {"name": "term", "symbols": ["term$ebnf$1", "term$ebnf$2", "term$ebnf$3"], "postprocess":  (d) => ({
-          type: 'piece',
+          type: 'term',
           number: d[0] ?? 1,
           elements: d[1].map((e) => ({
             type: 'element',
