@@ -17,7 +17,11 @@ term -> number:? (element number:?):+ ("(" term ")" number:?):? {% (d) => ({
     number: e[1] ?? 1,
     element: e[0],
   })),
-  subgroup: (d[2] ?? [])[1],
+  subgroup: (() => {
+    const group = (d[2] ?? [])[1];
+    if (group) group.number = d[2][3];
+    return group;
+  })(),
 }) %}
 
 element -> [A-Z] [a-z]:? {% (d) => d.join('') %}

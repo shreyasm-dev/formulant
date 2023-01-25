@@ -41,7 +41,11 @@ var grammar = {
             number: e[1] ?? 1,
             element: e[0],
           })),
-          subgroup: (d[2] ?? [])[1],
+          subgroup: (() => {
+            const group = (d[2] ?? [])[1];
+            if (group) group.number = d[2][3];
+            return group;
+          })(),
         }) },
     {"name": "element$ebnf$1", "symbols": [/[a-z]/], "postprocess": id},
     {"name": "element$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
