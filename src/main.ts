@@ -41,8 +41,6 @@ const parse = (input: string): Equation => {
 
 export default parse;
 
-console.log(JSON.stringify(parse('Al2(SO4)3+Ca(OH)2->Al(OH)3+CaSO4'), null, 2));
-
 export interface Equation {
   lhs: Side,
   rhs: Side,
