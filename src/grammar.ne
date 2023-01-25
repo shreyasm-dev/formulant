@@ -10,7 +10,7 @@ side -> term ("+" term):* {% (d) => ({
 }) %}
 
 term -> number:? (element number:?):+ ("(" term ")" number:?):? {% (d) => ({
-  type: 'piece',
+  type: 'term',
   number: d[0] ?? 1,
   elements: d[1].map((e) => ({
     type: 'element',
