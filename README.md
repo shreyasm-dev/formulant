@@ -13,7 +13,7 @@ npm install formulant
 ```typescript
 import parse from 'formulant';
 
-const equation = parse('H2O+CO2-H2CO3'); // Can't handle whitespace
+const equation = parse('H2O+CO2->H2CO3'); // Can't handle whitespace
 console.log(equation);
 ```
 
